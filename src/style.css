@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-color: rgb(124, 238, 207);
+  text-decoration: none;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: rgb(124, 238, 207);
+  color: white;
+}
+#container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* height: 2rem; */
+  /* background-color: #333; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: min(10px, 8%);
+}
+#nav img {
+  padding: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: -0.27rem;
+  filter: invert(1);
+  transition: filter 0.3s ease;
+
+  cursor: pointer;
+  /* Add hover effect */
+  &:hover {
+    background-color: rgb(187, 182, 224);
+    /* filter: invert(0.5); */
+  }
+}
+
+#searchButton {
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+
+  &:hover {
+    background-color: rgb(187, 182, 224);
+    /* filter: invert(0.5); */
+  }
+}
+#searchInput {
+  width: min(18rem, 40vw);
+  height: 2rem;
+  padding: 0rem;
+  border: none;
+  border-radius: 3rem;
+  background-color: white;
+  color: black;
+  font-size: slaph(0.8rem, 1.2rem, 1.5rem);
+}
+#unitToggle select {
+  width: 3.3rem;
+  font-size: auto;
+  height: 2rem;
+  background-color: rgb(187, 182, 224);
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(124, 238, 207);
+    /* filter: invert(0.5); */
+  }
+}
+#weatherDisplay {
+  /* position: absolute; */
+  /* top: 2rem; */
+  /* left: 0; */
+  margin-top: max(62px, 10vh);
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#weatherInfo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#details {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#details div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  /* background-color: rgb(187, 182, 224); */
+}
