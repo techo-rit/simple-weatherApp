@@ -2,6 +2,31 @@ const API_KEY = "f4f37a586901c1c0385a108eab625343";
 let currentData = null;
 let currentUnit = "metric"; // metric for Celsius, imperial for Fahrenheit
 
+// Base path for images (adjust 'repo-name' to your actual repository name)
+const basePath = "/repo-name"; // e.g., "/weather-app" if your repo is named "weather-app"
+
+// Weather icon mapping using local images
+const weatherIconMap = {
+    "01d": `${basePath}/images/clear.png`, // clear sky day
+    "01n": `${basePath}/images/clear.png`, // clear sky night
+    "02d": `${basePath}/images/clouds.png`, // few clouds day
+    "02n": `${basePath}/images/clouds.png`, // few clouds night
+    "03d": `${basePath}/images/clouds.png`, // scattered clouds
+    "03n": `${basePath}/images/clouds.png`, // scattered clouds
+    "04d": `${basePath}/images/clouds.png`, // broken clouds
+    "04n": `${basePath}/images/clouds.png`, // broken clouds
+    "09d": `${basePath}/images/rain.png`, // shower rain
+    "09n": `${basePath}/images/rain.png`, // shower rain
+    "10d": `${basePath}/images/rain.png`, // rain day
+    "10n": `${basePath}/images/rain.png`, // rain night
+    "11d": `${basePath}/images/rain.png`, // thunderstorm
+    "11n": `${basePath}/images/rain.png`, // thunderstorm
+    "13d": `${basePath}/images/snow.png`, // snow
+    "13n": `${basePath}/images/snow.png`, // snow
+    "50d": `${basePath}/images/mist.png`, // mist
+    "50n": `${basePath}/images/mist.png`, // mist
+};
+
 // DOM Elements
 const searchInput = document.getElementById("searchInput");
 const searchButton = document.getElementById("searchButton");
@@ -14,28 +39,6 @@ const humidityValue = document.getElementById("humidityValue");
 const windSpeedValue = document.getElementById("windSpeedValue");
 const pressureValue = document.getElementById("pressureValue");
 const visibilityValue = document.getElementById("visibilityValue");
-
-// Weather icon mapping using local images
-const weatherIconMap = {
-    "01d": "/images/clear.png", // clear sky day
-    "01n": "/images/clear.png", // clear sky night
-    "02d": "/images/clouds.png", // few clouds day
-    "02n": "/images/clouds.png", // few clouds night
-    "03d": "/images/clouds.png", // scattered clouds
-    "03n": "/images/clouds.png", // scattered clouds
-    "04d": "/images/clouds.png", // broken clouds
-    "04n": "/images/clouds.png", // broken clouds
-    "09d": "/images/rain.png", // shower rain
-    "09n": "/images/rain.png", // shower rain
-    "10d": "/images/rain.png", // rain day
-    "10n": "/images/rain.png", // rain night
-    "11d": "/images/rain.png", // thunderstorm
-    "11n": "/images/rain.png", // thunderstorm
-    "13d": "/images/snow.png", // snow
-    "13n": "/images/snow.png", // snow
-    "50d": "/images/mist.png", // mist
-    "50n": "/images/mist.png", // mist
-};
 
 // Initialize the app
 document.addEventListener("DOMContentLoaded", () => {
@@ -58,7 +61,7 @@ function initializeEventListeners() {
     // Add error handler for weather icon
     weatherIcon.onerror = () => {
         console.warn("Weather icon failed to load, using fallback");
-        weatherIcon.src = "/images/clear.png"; // Fallback image
+        weatherIcon.src = `${basePath}/images/clear.png`; // Fallback image
         weatherIcon.alt = "Weather icon not available";
     };
 }
@@ -153,7 +156,7 @@ function updateWeatherDisplay() {
         weatherIcon.style.display = "block";
     } else {
         console.warn("Weather icon code not found:", iconCode);
-        weatherIcon.src = "/images/clear.png"; // Fallback image
+        weatherIcon.src = `${basePath}/images/clear.png`; // Fallback image
         weatherIcon.alt = "Weather icon not available";
         weatherIcon.style.display = "block";
     }
