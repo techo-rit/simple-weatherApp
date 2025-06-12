@@ -17,24 +17,24 @@ const visibilityValue = document.getElementById("visibilityValue");
 
 // Weather icon mapping using local images
 const weatherIconMap = {
-    "01d": "/images/clear.png", // clear sky day
-    "01n": "/images/clear.png", // clear sky night
-    "02d": "/images/clouds.png", // few clouds day
-    "02n": "/images/clouds.png", // few clouds night
-    "03d": "/images/clouds.png", // scattered clouds
-    "03n": "/images/clouds.png", // scattered clouds
-    "04d": "/images/clouds.png", // broken clouds
-    "04n": "/images/clouds.png", // broken clouds
-    "09d": "/images/rain.png", // shower rain
-    "09n": "/images/rain.png", // shower rain
-    "10d": "/images/rain.png", // rain day
-    "10n": "/images/rain.png", // rain night
-    "11d": "/images/rain.png", // thunderstorm
-    "11n": "/images/rain.png", // thunderstorm
-    "13d": "/images/snow.png", // snow
-    "13n": "/images/snow.png", // snow
-    "50d": "/images/mist.png", // mist
-    "50n": "/images/mist.png", // mist
+    "01d": "../images/clear.png", // clear sky day
+    "01n": "../images/clear.png", // clear sky night
+    "02d": "../images/clouds.png", // few clouds day
+    "02n": "../images/clouds.png", // few clouds night
+    "03d": "../images/clouds.png", // scattered clouds
+    "03n": "../images/clouds.png", // scattered clouds
+    "04d": "../images/clouds.png", // broken clouds
+    "04n": "../images/clouds.png", // broken clouds
+    "09d": "../images/rain.png", // shower rain
+    "09n": "../images/rain.png", // shower rain
+    "10d": "../images/rain.png", // rain day
+    "10n": "../images/rain.png", // rain night
+    "11d": "../images/rain.png", // thunderstorm
+    "11n": "../images/rain.png", // thunderstorm
+    "13d": "../images/snow.png", // snow
+    "13n": "../images/snow.png", // snow
+    "50d": "../images/mist.png", // mist
+    "50n": "../images/mist.png", // mist
 };
 
 // Initialize the app
