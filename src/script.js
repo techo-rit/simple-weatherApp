@@ -2,8 +2,8 @@ const API_KEY = "f4f37a586901c1c0385a108eab625343";
 let currentData = null;
 let currentUnit = "metric"; // metric for Celsius, imperial for Fahrenheit
 
-// Base path for images (adjust 'repo-name' to your actual repository name)
-const basePath = "/repo-name"; // e.g., "/weather-app" if your repo is named "weather-app"
+// Base path for images (set to your repository name)
+const basePath = "/simple-weatherApp";
 
 // Weather icon mapping using local images
 const weatherIconMap = {
